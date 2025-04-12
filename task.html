@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task - Aulia Arief</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container-navbar">
+        <ul class="ul-navbar">
+            <li class="li-navbar"><a href="index.html">Home</a></li>
+            <li class="li-navbar"><a href="profile.html">Profile</a></li>
+            <li class="li-navbar"><a href="contact.html">Contact</a></li>
+            <li class="li-navbar"><a href="task.html">Task</a></li>
+        </ul>
+    </div>
+
+    <!-- Daftar Tugas -->
+    <div class="container-content">
+        <div class="task-list">
+            <h2>Daftar Tugas</h2>
+            <p class="task-item" onclick="showPDF('Laporan Ujian Tengah Semester - Aulia Arief.pdf', 'Tugas ini adalah laporan ujian tengah semester yang membahas tentang komponen yang ada dalam sistem multimedia.')">Tugas 1 - Sistem Bilangan</p>
+            <p class="task-item" onclick="showPDF('tugas2.pdf', 'Tugas ini menjelaskan dasar-dasar Aljabar Boolean.')">Tugas 2 - Aljabar Boolean</p>
+            <p class="task-item" onclick="showPDF('tugas3.pdf', 'Tugas ini berisi tentang gerbang logika dasar.')">Tugas 3 - Gerbang Logika</p>
+        </div>
+
+        <!-- Viewer PDF dan Keterangan Tugas -->
+        <div class="pdf-container">
+            <iframe id="pdfFrame" class="fade"></iframe>
+            <div class="task-description">
+                <h3>Keterangan Tugas</h3>
+                <p id="task-info">Pilih tugas untuk melihat detail dan file PDF.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-footer">
+        <h1 class="text-footer">Copyright © 2025 by Aulia Arief</h1>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showPDF(file, description) {
+            const frame = document.getElementById('pdfFrame');
+            const taskInfo = document.getElementById('task-info');
+            frame.classList.remove('show');
+            frame.src = file;
+            taskInfo.textContent = description;
+            frame.style.display = 'block';
+            setTimeout(() => {
+                frame.classList.add('show');
+            }, 10);
+        }
+
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.container-navbar');
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("navbar-hidden");
+            } else {
+                navbar.classList.add("navbar-hidden");
+            }
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+</body>
+</html>
