@@ -1,0 +1,111 @@
+/* RESET */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Layout utama agar konten dan footer tersusun dengan baik */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+}
+
+/* NAVBAR (jika digunakan di semua halaman) */
+.container-navbar {
+    background-color: rgba(128, 128, 128, 0.603);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.ul-navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.li-navbar {
+    text-align: center;
+}
+
+.ul-navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.ul-navbar a:hover {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+/* Kontainer utama konten */
+.contact-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px; /* menghindari tertutup navbar */
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+/* Email */
+.contact-info {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol ikon */
+.btn-icon {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Gambar ikon */
+.icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Footer tetap di bawah */
+.container-footer {
+    background-color: rgba(255, 255, 255, 0.277);
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.text-footer {
+    font-size: smaller;
+}

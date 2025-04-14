@@ -1,0 +1,149 @@
+/* index.css */
+
+/* RESET */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+/* NAVBAR */
+.container-navbar {
+    background-color: rgba(128, 128, 128, 0.603);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    padding: 15px 0;
+}
+
+.ul-navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.li-navbar {
+    text-align: center;
+}
+
+.ul-navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.ul-navbar a:hover {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+/* CONTENT UTAMA */
+.container-content {
+    flex-grow: 1;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    width: 100%;
+}
+
+/* TEKS INTERAKTIF */
+.intro-text h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.wave-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: wave 0.6s ease forwards;
+}
+  
+@keyframes wave {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+/* VIDEO */
+.video-frame video {
+    width: 100%; /* Menyesuaikan dengan lebar container */
+    max-width: 500px; /* Membatasi ukuran maksimal video */
+    border: 5px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+/* AUDIO */
+.audio-player audio {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    z-index: 2;
+    position: relative;
+}
+
+/*garis pembatas*/
+.divider {
+    width: 2px;
+    height: auto;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    margin: 0 20px;
+}
+
+/* FOOTER */
+.container-footer {
+    background-color: rgba(255, 255, 255, 0.277);
+    padding: 3px;
+    width: 100%;
+}
+
+.text-footer {
+    font-size: smaller;
+    text-align: center;
+}
