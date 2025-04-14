@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Task - Aulia Arief</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="task.css" />
 </head>
 <body>
     <!-- Navbar -->
@@ -20,9 +20,9 @@
     <div class="container-content">
         <div class="task-list">
             <h2>Daftar Tugas</h2>
-            <p class="task-item" onclick="showPDF('Laporan Ujian Tengah Semester - Aulia Arief.pdf', 'Tugas ini adalah laporan ujian tengah semester yang membahas tentang komponen yang ada dalam sistem multimedia.')">Tugas 1 - Sistem Bilangan</p>
-            <p class="task-item" onclick="showPDF('tugas2.pdf', 'Tugas ini menjelaskan dasar-dasar Aljabar Boolean.')">Tugas 2 - Aljabar Boolean</p>
-            <p class="task-item" onclick="showPDF('tugas3.pdf', 'Tugas ini berisi tentang gerbang logika dasar.')">Tugas 3 - Gerbang Logika</p>
+            <p class="task-item" onclick="showPDF('Laporan Ujian Tengah Semester - Aulia Arief.pdf', 'Tugas ini adalah laporan ujian tengah semester yang membahas tentang komponen yang ada dalam sistem multimedia.', 'Sistem Multimedia', 'Rahyul Amri, S.T., M.T', 'Laporan Ujian Tengah Semester')">Tugas 1 - Sistem Multimedia</p>
+            <p class="task-item" onclick="showPDF('-', '-', '-', '-', '-')">Tugas 2</p>
+            <p class="task-item" onclick="showPDF('-', '-', '-', '-', '-')">Tugas 3</p>
         </div>
 
         <!-- Viewer PDF dan Keterangan Tugas -->
@@ -31,6 +31,9 @@
             <div class="task-description">
                 <h3>Keterangan Tugas</h3>
                 <p id="task-info">Pilih tugas untuk melihat detail dan file PDF.</p>
+                <p><strong>Mata kuliah:</strong> <span id="course-name">-</span></p>
+                <p><strong>Dosen pengampu:</strong> <span id="lecturer-name">-</span></p>
+                <p><strong>Jenis tugas:</strong> <span id="task-type">-</span></p>
             </div>
         </div>
     </div>
@@ -42,13 +45,22 @@
 
     <!-- JavaScript -->
     <script>
-        function showPDF(file, description) {
+        function showPDF(file, description, course, lecturer, type) {
             const frame = document.getElementById('pdfFrame');
             const taskInfo = document.getElementById('task-info');
+            const courseName = document.getElementById('course-name');
+            const lecturerName = document.getElementById('lecturer-name');
+            const taskType = document.getElementById('task-type');
+
             frame.classList.remove('show');
             frame.src = file;
-            taskInfo.textContent = description;
             frame.style.display = 'block';
+
+            taskInfo.textContent = description;
+            courseName.textContent = course;
+            lecturerName.textContent = lecturer;
+            taskType.textContent = type;
+
             setTimeout(() => {
                 frame.classList.add('show');
             }, 10);
