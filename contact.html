@@ -1,38 +1,69 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> Aulia Arief </title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <!-- navigation -->
-        <div class="container-navbar">
-            <ul class="ul-navbar">
-                <li class="li-navbar">
-                    <a href="index.html"> Home </a>
-                </li>
-                <li class="li-navbar">
-                    <a href="profile.html"> Profile </a>
-                </li>
-                <li class="li-navbar">
-                    <a href="contact.html"> Contact </a>
-                </li>
-                <li class="li-navbar">
-                    <a href="task.html"> Task </a>
-                </li>
-            </ul>
-        </div>
-        <!-- navigation end -->
+<head>
+    <title>Contact - Aulia Arief</title>
+    <link rel="stylesheet" href="contact.css" />
+    <style>
+        /* Gaya tambahan jika ingin langsung dalam HTML (opsional) */
+        .contact-container {
+            text-align: center;
+            padding: 40px;
+        }
 
-        <!-- content 1 -->
-        <div class="container-content">
-            <p class="p-content">Stay Tune</p>
-        </div>
-        <!-- content 1 end -->
+        .contact-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
 
-        <!-- footer -->
-        <div class="container-footer">
-            <h1 class="text-footer"> Copyright © 2025 by Aulia Arief </h1>
-        </div> 
-        <!-- footer end -->
-    </body> 
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="container-navbar">
+        <ul class="ul-navbar">
+            <li class="li-navbar"><a href="index.html">Home</a></li>
+            <li class="li-navbar"><a href="profile.html">Profile</a></li>
+            <li class="li-navbar"><a href="contact.html">Contact</a></li>
+            <li class="li-navbar"><a href="task.html">Task</a></li>
+        </ul>
+    </div>
+    <!-- navigation end -->
+
+    <!-- contact content -->
+    <div class="contact-container">
+        <p class="contact-info">
+            Email: <a href="mailto:ariefauliapku@gmail.com">ariefauliapku@gmail.com</a>
+        </p>
+    
+        <a href="https://github.com/rieppng" target="_blank" class="btn-icon">
+            <img src="github.png" alt="GitHub" class="icon">
+        </a>
+    
+        <a href="https://instagram.com/aariefaulia" target="_blank" class="btn-icon">
+            <img src="instagram.png" alt="Instagram" class="icon">
+        </a>
+    </div>
+    <!-- contact content end -->
+
+    <!-- footer -->
+    <div class="container-footer">
+        <h1 class="text-footer">Copyright © 2025 by Aulia Arief</h1>
+    </div>
+    <!-- footer end -->
+</body>
 </html>
