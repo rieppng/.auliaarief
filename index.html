@@ -1,38 +1,79 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> Aulia Arief </title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <!-- navigation -->
-        <div class="container-navbar">
-            <ul class="ul-navbar">
-                <li class="li-navbar">
-                    <a href="index.html"> Home </a>
-                </li>
-                <li class="li-navbar">
-                    <a href="profile.html"> Profile </a>
-                </li>
-                <li class="li-navbar">
-                    <a href="contact.html"> Contact </a>
-                </li>
-                <li class="li-navbar">
-                    <a href="task.html"> Task </a>
-                </li>
-            </ul>
-        </div>
-        <!-- navigation end -->
+<head>
+    <title>Aulia Arief</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <!-- navigation -->
+    <div class="container-navbar">
+        <ul class="ul-navbar">
+            <li class="li-navbar"><a href="index.html"> Home </a></li>
+            <li class="li-navbar"><a href="profile.html"> Profile </a></li>
+            <li class="li-navbar"><a href="contact.html"> Contact </a></li>
+            <li class="li-navbar"><a href="task.html"> Task </a></li>
+        </ul>
+    </div>
+    <!-- navigation end -->
 
-        <!-- content 1 -->
-        <div class="container-content">
-                <marquee> Hallo </marquee>
+    <!-- content -->
+    <div class="container-content">
+        <div class="content-row">
+            <!-- Teks interaktif -->
+            <div class="intro-text">
+                <h1 id="waveText">Selamat datang di website saya</h1>
+                <p>Laman ini berisi record kegiatan perkuliahan di Universitas Riau dan sedikit cerita hidup saya.</p>
+            </div>
+    
+            <!-- Garis pembatas -->
+            <div class="divider"></div>
+    
+            <!-- Video dengan frame halus -->
+            <div class="video-frame">
+                <video width="600" controls>
+                    <source src="kucing.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video.
+                </video>
+            </div>
         </div>
-        <!-- content 1 end -->
+    </div>    
+    <!-- content end -->
 
-        <!-- footer -->
-        <div class="container-footer">
-            <h1 class="text-footer"> Copyright © 2025 by Aulia Arief </h1>
-        </div> 
-        <!-- footer end -->
-    </body> 
+    <!-- footer -->
+    <div class="container-footer">
+        <h1 class="text-footer">Copyright © 2025 by Aulia Arief</h1>
+    </div>
+
+    <!-- scroll effect -->
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.container-navbar');
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("navbar-hidden");
+            } else {
+                navbar.classList.add("navbar-hidden");
+            }
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+
+    <!-- wave text -->
+    <script>
+        const text = document.getElementById("waveText");
+        const originalText = text.textContent;
+        text.innerHTML = ""; // Bersihkan konten sebelumnya
+
+        [...originalText].forEach((char, index) => {
+            const span = document.createElement("span");
+            span.textContent = char === ' ' ? '\u00A0' : char;  // Gunakan karakter spasi non-breaking jika char adalah spasi
+            span.style.animationDelay = `${index * 0.05}s`;
+            text.appendChild(span);
+        });
+
+        text.classList.add("wave-text");
+    </script>
+</body>
 </html>
