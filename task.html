@@ -65,18 +65,6 @@
                 frame.classList.add('show');
             }, 10);
         }
-
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.querySelector('.container-navbar');
-
-        window.onscroll = function () {
-            const currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-                navbar.classList.remove("navbar-hidden");
-            } else {
-                navbar.classList.add("navbar-hidden");
-            }
-            prevScrollPos = currentScrollPos;
         };
     </script>
 </body>
