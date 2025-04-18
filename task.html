@@ -21,13 +21,145 @@
         <div class="task-list">
             <h2>Daftar Tugas</h2>
             <p class="task-item" onclick="showPDF('Laporan Ujian Tengah Semester - Aulia Arief.pdf', 'Tugas ini adalah laporan ujian tengah semester yang membahas tentang komponen yang ada dalam sistem multimedia.', 'Sistem Multimedia', 'Rahyul Amri, S.T., M.T', 'Laporan Ujian Tengah Semester')">Tugas 1 - Sistem Multimedia</p>
-            <p class="task-item" onclick="showPDF('-', '-', '-', '-', '-')">Tugas 2</p>
+            <p class="task-item" onclick="showMediaContent()">Tugas 2 - Multimedia Collection</p>
             <p class="task-item" onclick="showPDF('-', '-', '-', '-', '-')">Tugas 3</p>
         </div>
 
         <!-- Viewer PDF dan Keterangan Tugas -->
         <div class="pdf-container">
             <iframe id="pdfFrame" class="fade"></iframe>
+            
+            <!-- Media Content Container (hidden by default) -->
+            <div id="mediaContent" class="media-content">
+                <!-- Fonts Section -->
+                <div class="media-section">
+                    <h3>10 Jenis Font</h3>
+                    <div class="fonts-container">
+                        <p style="font-family: 'Arial', sans-serif;">1. Arial - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Times New Roman', serif;">2. Times New Roman - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Courier New', monospace;">3. Courier New - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Georgia', serif;">4. Georgia - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Verdana', sans-serif;">5. Verdana - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Impact', sans-serif;">6. Impact - THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</p>
+                        <p style="font-family: 'Comic Sans MS', cursive;">7. Comic Sans MS - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Trebuchet MS', sans-serif;">8. Trebuchet MS - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Palatino', serif;">9. Palatino - The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-family: 'Lucida Console', monospace;">10. Lucida Console - The quick brown fox jumps over the lazy dog</p>
+                    </div>
+                </div>
+
+                <!-- Audio Section -->
+                <div class="media-section">
+                    <h3>10 Format Audio</h3>
+                    <div class="audio-container">
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/16s4kR-dv58zZYwBg8UMpq4gz2idU7Xm7/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: mp3</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/10kpr2U-ri7MYT75vzEuH9OQ2Niuz8pG7/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: aac</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/1LMwvq_KkqBiQ5UgyX_ugiDR35rVH8zKT/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: opus</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/1VjKhOYslTztvmr3Z1zE7FEW6e2jHoxHI/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: aiff</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/1ROxLciceErdQMw_WNRa3SmBlSR9W5Vyc/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: dsd</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/1xOhltyThy6NUIKap-UwmLiGZWEjmBYxC/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: flac</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/12easFRCksHwBkoVmuj4FmmhLFO4tUKD4/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: m4a</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/19mblPy1gJ4-ETcsgpwbfiRh8jSqHxgyr/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: ogg</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/1zB1SDFiQ9Zcs38ZRDtIHuLJS3SGNHc1W/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: wav</p>
+                        </div>
+                        <div class="media-item">
+                            <iframe src="https://drive.google.com/file/d/1frc7Wc_jjjXdFxhAmRmD0GAqhtd1_ERG/preview" allow="autoplay"></iframe>
+                            <p class="format-info">Format: wma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="media-section">
+                    <h3>10 Video Examples</h3>
+                    <div class="video-container">
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" type="video/mp4"></video>
+                        <video width="200" controls><source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+
+                <!-- Images Section -->
+                <div class="media-section">
+                    <h3>10 Format Gambar</h3>
+                    <div class="image-container">
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.png" alt="Image png">
+                            <div class="format-info">Format: png</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.jpg" alt="Image jpg">
+                            <div class="format-info">Format: jpg</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.bmp" alt="Image bmp">
+                            <div class="format-info">Format: bmp</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.webp" alt="Image webp">
+                            <div class="format-info">Format: webp</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.gif" alt="Image gif">
+                            <div class="format-info">Format: gif</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.tiff" alt="Image tiff">
+                            <div class="format-info">Format: tiff</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.pdf" alt="Image pdf">
+                            <div class="format-info">Format: pdf</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.svg" alt="Image svg">
+                            <div class="format-info">Format: svg</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.odd" alt="Image odd">
+                            <div class="format-info">Format: odd</div>
+                        </div>
+                        <div class="media-item">
+                            <img src="assets/image/Screenshot 2025-04-16 223036.psd" alt="Image psd">
+                            <div class="format-info">Format: psd</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="task-description">
                 <h3>Keterangan Tugas</h3>
                 <p id="task-info">Pilih tugas untuk melihat detail dan file PDF.</p>
@@ -51,6 +183,11 @@
             const courseName = document.getElementById('course-name');
             const lecturerName = document.getElementById('lecturer-name');
             const taskType = document.getElementById('task-type');
+            const mediaContent = document.getElementById('mediaContent');
+
+            // Hide media content and show PDF
+            mediaContent.style.display = 'none';
+            frame.style.display = 'block';
 
             frame.classList.remove('show');
             frame.src = file;
@@ -65,6 +202,38 @@
                 frame.classList.add('show');
             }, 10);
         }
+
+        function showMediaContent() {
+            const frame = document.getElementById('pdfFrame');
+            const taskInfo = document.getElementById('task-info');
+            const courseName = document.getElementById('course-name');
+            const lecturerName = document.getElementById('lecturer-name');
+            const taskType = document.getElementById('task-type');
+            const mediaContent = document.getElementById('mediaContent');
+
+            // Hide PDF and show media content
+            frame.style.display = 'none';
+            mediaContent.style.display = 'block';
+
+            // Update task info
+            taskInfo.textContent = 'Koleksi multimedia yang mencakup 10 font, 10 audio, 10 video, dan 10 gambar.';
+            courseName.textContent = 'Multimedia';
+            lecturerName.textContent = 'Aulia Arief';
+            taskType.textContent = 'Koleksi Multimedia';
+        }
+
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.container-navbar');
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("navbar-hidden");
+            } else {
+                navbar.classList.add("navbar-hidden");
+            }
+            prevScrollPos = currentScrollPos;
+        };
     </script>
 </body>
 </html>
